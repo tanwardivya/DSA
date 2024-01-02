@@ -29,3 +29,5 @@ if __name__ == '__main__':
     solution = Solution()
     result = solution.product_array_except_itself(nums = nums2)
     print(f'Product of array except itself:{result}')
+
+    

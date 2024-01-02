@@ -4,14 +4,14 @@ from typing import List
 class Solution:
 
     def two_sum(self, nums : List[int] , target : int)-> List[int]:
-        """_summary_
+        """Sum of two numbers.
 
         Args:
-            num (int): _description_
-            target (int): _description_
+            num (int): List of integers
+            target (int): Target value
 
         Returns:
-            int: _description_
+            int: return the indices of the two numbers that added upto the target value.
         """
         index_map = {}
         for index in range(0, len(nums)):
