@@ -52,9 +52,6 @@ class LinkedList:
             current = current.next
         return count
 
-            
-
-
 
 def main():
     linked_list = LinkedList()

@@ -1,0 +1,31 @@
+from linked_list import LinkedList
+
+def reverse_linked_list(node:LinkedList):
+    previous = None 
+    current = node.head
+
+    while current:
+        next_node = current.next
+        current.next = previous
+        previous = current
+        current = next_node
+
+    return previous
+
+
+def main():
+    node1 = LinkedList()
+    node1.add_to_tail(1)
+    node1.add_to_tail(2)
+    node1.add_to_tail(4)
+    node1.add_to_tail(5)
+    node1.traverse()
+    result = reverse_linked_list(node1)
+    result.traverse()
+
+if __name__ == "__main__":
+    main()
+    
+
+
+
