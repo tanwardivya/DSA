@@ -1,10 +1,5 @@
 from typing import Union
-
-
-class Node:
-    def __init__(self,data):
-        self.data = data
-        self.next = None
+from node import Node
 
 class LinkedList:
 
@@ -22,6 +17,35 @@ class LinkedList:
 
         current.next = node #type:ignore
 
+    def get_head(self):
+        return self.head
+
+    def add_to_head(self, data):
+        node = Node(data)
+        if self.head is None:
+            self.head = node
+            return
+        node.next = self.head
+        self.head = node
+
+    def insert_node(self, position, data):
+        node = Node(data)
+        if self. head is None:
+            self.head = node
+            return
+        size = self.size()
+        if position > size:
+            raise ValueError('Invalid position')
+        count = 1
+        current = self.head
+        while current:
+            if count == position:
+                temp = current.next
+                current.next = node
+                node.next = temp
+                return
+            count +=1
+            current = current.next 
 
     def traverse(self):
         current = self.head
@@ -63,6 +87,20 @@ def main():
     print(linked_list.size())
     linked_list.traverse()
     print(linked_list.size())
+
+    linked_list = LinkedList()
+    linked_list.add_to_head(1)
+    linked_list.add_to_head(2)
+    linked_list.add_to_head(3)
+    linked_list.traverse()
+    # insert node 4 at position 1
+    linked_list.insert_node(1, 4)
+    linked_list.traverse()
+    # insert node 6 at position 1
+    linked_list.insert_node(4, 6)
+    linked_list.traverse()
+
+
 
 if __name__ == "__main__":
     main()
