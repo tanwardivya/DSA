@@ -34,20 +34,20 @@ class MaxDepth:
         return level
 
 
-    def preorder(self,root:TreeNode):
-        result = []
-        current = root
+    # def preorder(self,root:TreeNode):
+    #     result = []
+    #     current = root
 
-        def helper(current:TreeNode):
-            if current == None:
-                return
+    #     def helper(current:TreeNode):
+    #         if current == None:
+    #             return
             
-            result.append(current.val)
-            helper(current.left)
-            helper(current.right)
-            return
-        helper(current)
-        return result
+    #         result.append(current.val)
+    #         helper(current.left)
+    #         helper(current.right)
+    #         return
+    #     helper(current)
+    #     return result
 
 def main():
     tn = TreeNode(3)# instance of TreeNode class
@@ -58,8 +58,8 @@ def main():
     md = MaxDepth()#instance of MaxDepth class
     depth = md.max_depth(tn)#
     print(depth)
-    final_result = md.preorder(tn)
-    print(final_result)
+    # final_result = md.preorder(tn)
+    # print(final_result)
 
 if __name__ == "__main__":
     main()

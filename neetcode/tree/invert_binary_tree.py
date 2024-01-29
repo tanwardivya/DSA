@@ -46,6 +46,8 @@ def main():
     tn.right.left = TreeNode(6)
     tn.right.right = TreeNode(9)
     solution = Solution()
+    original_tree = solution.preorder(tn)
+    print("original_tree:",original_tree)
     inverted_tree = solution.invert_tree(tn)
     result = solution.preorder(inverted_tree)
     print("inverted_binary_tree:", result)
