@@ -27,8 +27,8 @@ class Solution:
         Returns:
             bool: _description_
         """
-        array = sorted(array)
-        temp = array[0]
+        array = sorted(array)# the input array sorted using the sorted function 
+        temp = array[0]#the variable temp is initialised with the first element of the sorted array
         for index in range(1,len(array)):
             if array[index] == temp:
                 return True
