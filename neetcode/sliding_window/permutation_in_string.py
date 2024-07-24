@@ -32,5 +32,14 @@ class Solution:
             left += 1
         return matches == 26
 
+def main():
+    solution = Solution()
+    s1 = "abc"
+    s2 = "baxyzabc"
+    
+    answer = solution.permutation_in_string(s1, s2)
+    print(answer)
 
+if __name__ == "__main__":
+    main()
 

@@ -1,10 +1,9 @@
-from typing import Union
 from node import Node
 
 class LinkedList:
 
     def __init__(self):
-        self.head = None
+        self.head : Node | None = None
     
     def add_to_tail(self,data):
         node = Node(data)# Creating a New Instance: When you write node = Node(data), you are calling the constructor of the Node class. The constructor is a special method that is automatically called when a new instance of a class is created. In this case, it's expected that the Node class has a constructor that takes a single argument (data) and uses it to initialize the new node.

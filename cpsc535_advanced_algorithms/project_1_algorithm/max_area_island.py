@@ -72,7 +72,7 @@ class Solution:
         """
         # Check the after changing the direction, position are within grid boundary and 
         # perform depth first search on only land
-        if i>=0 and i< (len(grid)) and j>=0 and j<(len(grid)) and grid[i][j]==0:
+        if i>=0 and i< (len(grid)) and j>=0 and j<(len(grid[0])) and grid[i][j]==0:
             grid[i][j] = 1 # Mark as visited
             # Perform DFS in up, down, left and right
             return 1 + self.dfs(grid, i+1, j) + self.dfs(grid,i-1,j)+ self.dfs(grid,i,j-1) + self. dfs(grid, i,j+1)

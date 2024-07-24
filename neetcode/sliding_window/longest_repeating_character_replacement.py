@@ -39,3 +39,13 @@ class Solution:
         return result
 
 
+
+def main():
+    solution = Solution()
+    s = "XYYX"
+    k = 2
+    answer = solution.longest_repeating_character_replacement(s, k)
+    print(answer)
+
+if __name__ == "__main__":
+    main()
