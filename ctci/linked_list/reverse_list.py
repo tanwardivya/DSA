@@ -5,7 +5,7 @@ def reverse_linked_list(node:LinkedList):
     previous = None 
     current = node.head
 
-    while current:
+    while current is not None:
         new_node = Node(current.data)
         new_node.next = previous
         previous = new_node
