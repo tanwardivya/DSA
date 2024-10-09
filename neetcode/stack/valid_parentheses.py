@@ -15,3 +15,14 @@ class Solution:
                 stack.append(character)
         
         return True if not stack else False
+
+def main():
+    solution = Solution()
+    s = "([{}])"
+    ans = solution.valid_parentheses(s)
+    print(ans)
+
+if __name__ == "__main__":
+    main()
+
+

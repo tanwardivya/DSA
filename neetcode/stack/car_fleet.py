@@ -1,12 +1,12 @@
 class CarFleet:
     def car_fleet(self,target:int,position:list[int],speed:list[int])->int:
-#creating an array of pairs and iterate through the position and speed array simultaneously, i can do that with zip  
+#creating an array of pairs and iterate through the position and speed array simultaneously, i can do that with zip or we an call it list comprehension 
         pair = [[p,s] for p,s in zip(position,speed)]  
-        print("Pairs:", pair)
+        # print("Pairs:", pair)
 
         #sorting the pairs in descending order of position
-        sorted_pairs = sorted(pair,reverse = True)
-        print("Sorted_pairs:", sorted_pairs)
+        # sorted_pairs = sorted(pair,reverse = True)
+        # print("Sorted_pairs:", sorted_pairs)
 
         stack = []
 # This sorts the pairs in descending order of position. The [::-1] reverses the sorted list.       
@@ -27,7 +27,7 @@ class CarFleet:
 
             if len(stack) >= 2 and stack[-1] <= stack[-2]:
                 stack.pop()
-        print("final_stack:", stack)
+        # print("final_stack:", stack)
         return len(stack )
 
 def main():
