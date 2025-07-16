@@ -14,7 +14,8 @@ class Solution:
 
 
 if __name__ == '__main__':
-    strs = ["eat","tea","tan","ate","nat","bat"]  
+    # strs = ["eat","tea","tan","ate","nat","bat"]  
+    strs = ["act", "pots", "tops", "cat", "stop", "hat"]
     solution = Solution()   
     result = solution.groupAnagrams(strs) 
     print(f"Group of anagrams:{result}")
